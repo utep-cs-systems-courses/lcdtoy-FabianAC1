@@ -8,9 +8,7 @@
 
 
 void main(void) {
-
-
-  and_sr(~16);  
+  
   configureClocks();
   lcd_init();
   switch_init();
