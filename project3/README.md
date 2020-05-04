@@ -1,4 +1,4 @@
-# Blinky Buzzy Toy
+# LAB 3
 # to run this code
   1. clone repo
   3. then go into project3 folder type the make command
