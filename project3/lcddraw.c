@@ -31,8 +31,8 @@ void drawrainbow(){  // draws a rainbow and displays a message
     }
   }
   drawString5x7(60,80,"PROJECT 3", COLOR_BLACK,COLOR_YELLOW);
-   drawString5x7(60,90,"THE END", COLOR_BLACK,COLOR_YELLOW);
-    drawString5x7(60,100,"........", COLOR_BLACK,COLOR_YELLOW);
+  drawString5x7(60,90,"THE END", COLOR_BLACK,COLOR_YELLOW);
+  drawString5x7(60,100,"........", COLOR_BLACK,COLOR_YELLOW);
 }
 
 void drawMe(u_int color){ //this method draws a star and a square resembeling patrick and spongebob
@@ -70,6 +70,28 @@ void drawMe(u_int color){ //this method draws a star and a square resembeling pa
     }
   }
  
+void drawBigJelly(u_char col, u_char row,u_int color){ // this method draws a large jellyfish 
+  u_char j,i;
+   for(j=0; j<10;j++){
+      for(i=0;i<10;i++){
+	drawPixel(j+col,i+row,color);
+      }
+      
+    }
+
+   for(j=8;j<16;j++){
+
+     drawPixel(col,j+row,color);
+     drawPixel(col+9,j+row,color);
+     drawPixel(col+3,j+row,color);
+     drawPixel(col+7,j+row,color);
+      
+   }
+
+   
+
+}
+
 void drawJelly(u_char col, u_char row,u_int color){ // this method draws a jellyfish 
   u_char j,i;
    for(j=0; j<8;j++){

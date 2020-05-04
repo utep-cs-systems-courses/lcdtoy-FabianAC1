@@ -21,9 +21,10 @@ load: main.elf
 clean:
 	rm -f *.o *.elf
 
-led.c: led.h
+led.o: led.h led.c
 wdInterruptHandler.o: stateMachine.h
 stateMachine.o: led.h stateMachine.h
-buzzer.c: buzzer.h
-switches.c: switches.h
-main.o: led.h buzzer.h switches.h 
+buzzer.o: buzzer.h buzzer.c
+switches.o: switches.h switches.c
+main.o: led.h buzzer.h switches.h main.c
+lcddraw.o: lcddraw.h lcddraw.c main.c main.o
