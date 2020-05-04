@@ -3,8 +3,6 @@
  */
 #include "lcdutils.h"
 #include "lcddraw.h"
-
-
 /** Draw single pixel at x,row 
  *
  *  \param col Column to draw to
@@ -17,7 +15,27 @@ void drawPixel(u_char col, u_char row, u_int colorBGR)
   lcd_writeColor(colorBGR);
 }
 
- void drawMe(u_int color){
+void drawrainbow(){  // draws a rainbow and displays a message
+  u_int arrColor[] = {COLOR_YELLOW,COLOR_BLUE,COLOR_RED,COLOR_ORANGE,COLOR_GREEN};
+  u_char i,j;
+  int n =0;
+  for(j=0;j<128;j++){
+    for(i=0; i<160;i++){
+      drawPixel(j,i,arrColor[n]);
+    }
+    if(j%10 ==0){
+    n++;
+    }
+    if(n == 4){
+      n==0;
+    }
+  }
+  drawString5x7(60,80,"PROJECT 3", COLOR_BLACK,COLOR_YELLOW);
+   drawString5x7(60,90,"THE END", COLOR_BLACK,COLOR_YELLOW);
+    drawString5x7(60,100,"........", COLOR_BLACK,COLOR_YELLOW);
+}
+
+void drawMe(u_int color){ //this method draws a star and a square resembeling patrick and spongebob
    u_char i, j;
     for(j=0;j<12;j++){
       for(i=0; i<8;i++){
@@ -52,7 +70,7 @@ void drawPixel(u_char col, u_char row, u_int colorBGR)
     }
   }
  
-void drawJelly(u_char col, u_char row,u_int color){
+void drawJelly(u_char col, u_char row,u_int color){ // this method draws a jellyfish 
   u_char j,i;
    for(j=0; j<8;j++){
       for(i=0;i<8;i++){

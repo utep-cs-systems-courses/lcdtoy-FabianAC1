@@ -13,6 +13,7 @@
  */
 void drawPixel(u_char col, u_char row, u_int colorBGR);
 void drawMe(u_int color);
+void drawrainbow();
 void drawJelly(u_char col,u_char row, u_int color);
 /** Fill rectangle
  *

@@ -63,7 +63,12 @@ switch_interrupt_handler()
     
     switch_state_down = s2;
     switch_state_changed = 1;
-    buzzer_set_period(1200);
+    buzzer_set_period(beat);
+    beat+=50;
+    led_init();
+    toggle_red();
+    led_update();
+    green_on =1;
     dim1 = 0;
     drawPixel(3,4,COLOR_GREEN);
     drawJelly(c,r,colorR[cplace]);
@@ -93,6 +98,7 @@ switch_interrupt_handler()
     switch_state_down = s4;
     switch_state_changed = 1;
     dim1 =0;
+    drawrainbow();
     
   }
 }

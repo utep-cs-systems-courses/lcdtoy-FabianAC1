@@ -11,4 +11,5 @@
 ## switch 3
    This switch clears the screen and noise
 ## switch 4
+   This switch draws a rainbow on the screen and displays a message
     
